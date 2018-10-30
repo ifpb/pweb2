@@ -51,6 +51,7 @@ A nota final será computado através da média das avaliações:
 * Avaliação I (Prova Escrita 1)
 * Avaliação II (Prova Escrita 2)
 * Avaliação III (Projeto)
+* Avaliação IV (Homeworks)
 
 ## Bibliografia
 
