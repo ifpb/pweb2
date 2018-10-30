@@ -23,7 +23,7 @@ Toda a comunicação será realizada usando o [![Slack Status](https://ifpb.hero
 ## Conteúdo e Cronograma de aulas
 | <sub>Semana</sub> | <sub>Aulas<sub> | <sub>Tópicos</sub>                               | <sub>Homeworks</sub>       |
 |:-:|:--------:|--------------------------------------|:-----------------:|
-| <sub>01 | <sub>30-Out-01/Nov  | <sub>Introdução a aplicações web baseadas em microsserviços; Spring Boot: visão geral, conceitos básicos |  |
+| <sub>01 | <sub>30-Out-01/Nov  | <sub>[Introdução a aplicações web baseadas em microsserviços](slides/01-introducao.pdf); Spring Boot: visão geral, conceitos básicos ([Exemplo](exemplos/01-spring-inicial)) |  |
 | <sub>02 | <sub>06-Nov/08-Nov  | <sub>Spring Boot: prática no desenvolvimento. Resolução de problemas práticos. |  |
 | <sub>03 | <sub>13-Nov/15-Nov  | <sub>Decompondo aplicações monolíticas em microsserviços |  |
 | <sub>04 | <sub>20-Nov/22-Nov  | <sub>Modelando Lógica de Negócio com Domain Driven Design |  |
