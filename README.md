@@ -25,9 +25,9 @@ Toda a comunicação será realizada usando o [![Slack Status](https://ifpb.hero
 |:-:|:--------:|--------------------------------------|:-----------------:|
 | <sub>01 | <sub>30-Out-01/Nov  | <sub>[Introdução a aplicações web baseadas em microsserviços](slides/01-introducao.pdf); <br> Spring Boot: visão geral, conceitos básicos ([Exemplo](exemplos/01-spring-inicial)) |  |
 | <sub>02 | <sub>06-Nov/08-Nov  | <sub>Spring Boot: prática no desenvolvimento. Resolução de problemas práticos. |  |
-| <sub>03 | <sub>13-Nov/15-Nov  | <sub>Decompondo aplicações monolíticas em microsserviços |  |
-| <sub>04 | <sub>20-Nov/22-Nov  | <sub>Modelando Lógica de Negócio com Domain Driven Design |  |
-| <sub>05 | <sub>27-Nov/29-Nov  | <sub>Comunicação entre microsserviços (síncrona e assíncrona) |  |
+| <sub>03 | <sub>13-Nov/15-Nov  | <sub>[Decompondo aplicações monolíticas em microsserviços](slides/02-decompondo-em-microservicos.pdf) |  |
+| <sub>04 | <sub>20-Nov/22-Nov  | <sub>[Modelando Lógica de Negócio com Domain Driven Design](slides/03-domain-driven-design.pdf) |  |
+| <sub>05 | <sub>27-Nov/29-Nov  | <sub>[Comunicação entre microsserviços (síncrona e assíncrona)](slides/04-comunicacao.pdf) |  |
 | <sub>06 | <sub>04-Dez/06-Dez  | <sub>Prática com Apache Kafka e Spring Cloud Stream |  |
 | <sub>07 | <sub>11-Dez/13-Dez  | <sub>Implementando consultas numa arquitetura de microsserviços: CQRS e API e Composition | |
 | <sub>08 | <sub>18-Dez/20-Dez  | <sub>Prova | |
