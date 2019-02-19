@@ -21,27 +21,7 @@ Toda a comunicação será realizada usando o [![Slack Status](https://ifpb.hero
 
 
 ## Conteúdo e Cronograma de aulas
-| <sub>Semana</sub> | <sub>Aulas<sub> | <sub>Tópicos</sub>                               | <sub>Homeworks</sub>       |
-|:-:|:--------:|--------------------------------------|:-----------------:|
-| <sub>01 | <sub>30-Out-01/Nov  | <sub>[Introdução a aplicações web baseadas em microsserviços](slides/01-introducao.pdf); <br> Spring Boot: visão geral, conceitos básicos ([Exemplo](exemplos/01-spring-inicial)) |  |
-| <sub>02 | <sub>06-Nov/08-Nov  | <sub>Spring Boot: prática no desenvolvimento. Resolução de problemas práticos. |  |
-| <sub>03 | <sub>13-Nov/15-Nov  | <sub>[Decompondo aplicações monolíticas em microsserviços](slides/02-decompondo-em-microservicos.pdf) |  |
-| <sub>04 | <sub>20-Nov/22-Nov  | <sub>[Modelando Lógica de Negócio com Domain Driven Design](slides/03-domain-driven-design.pdf) |  |
-| <sub>05 | <sub>27-Nov/29-Nov  | <sub>[Comunicação entre microsserviços (síncrona e assíncrona)](slides/04-comunicacao.pdf) |  |
-| <sub>06 | <sub>04-Dez/06-Dez  | <sub>Prática com Apache Kafka e Spring Cloud Stream |  |
-| <sub>07 | <sub>11-Dez/13-Dez  | <sub>Implementando consultas numa arquitetura de microsserviços: CQRS e API e Composition | |
-| <sub>08 | <sub>18-Dez/20-Dez  | <sub>Prova | |
-| <sub>09 | <sub>22-Jan/24-Jan  | <sub>Padrões para o consumo de APIs externas (gateway) - comunicação com front-end | |
-| <sub>10 | <sub>29-Jan/31-Jan  | <sub>Desenvolvendo serviços prontos para produção | |
-| <sub>11 | <sub>05-Fev/07-Fev  | <sub>Front-end: ferramentas e integração. Prática com Angular 5. | |
-| <sub>12 | <sub>12-Fev/14-Fev  | <sub>Implementando Autenticação/autorização com interface gráfica | |
-| <sub>13 | <sub>19-Fev/21-Fev  | <sub>Implementando serviços de borda (auditoria/health) com interface gráfica | |
-| <sub>14 | <sub>26-Fev/28-Fev  | <sub>Operações práticas com interface: componentes complexos (ex.: upload de arquivos) |  |
-| <sub>15 | <sub>12-Mar/14-Mar  | <sub>Feedback de microsserviços usando Spring Cloud Stream e Web Socket |  |
-| <sub>16 | <sub>19-Mar/21-Mar  | <sub>Integração de consultas e API composition com front-end |  |
-| <sub>17 | <sub>26-Mar/28-Mar  | <sub>Prova |  |
-| <sub>18 | <sub>02-Abr/04-Abr  | <sub>Apresentação dos Projetos e Tópicos Avançados |  |
-| <sub>19 | <sub>09-Abr  | <sub>Finais |  |
+[Acessar cronograma de aulas](https://docs.google.com/spreadsheets/d/18jABLNxY4M-_--t__MmRuBNJOBv0dZC1EaNRZTztyyY/edit?usp=sharing)
 
 ## Avaliações
 
