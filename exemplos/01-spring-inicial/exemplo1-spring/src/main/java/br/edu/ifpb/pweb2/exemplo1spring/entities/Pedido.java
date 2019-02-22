@@ -78,7 +78,7 @@ public class Pedido extends AbstractAggregateRoot<Pedido> {
 
     public Pedido pedidoEmProcessamento() {
         this.setStatus(PedidoStatus.EM_PROCESSAMENTO);
-        return andEvent(new PedidoEmProcessamento(getId()));
+        return andEvent(new PedidoEmProcessamento(this.id));
     }
 
     public Pedido pedidoFinalizado() {
