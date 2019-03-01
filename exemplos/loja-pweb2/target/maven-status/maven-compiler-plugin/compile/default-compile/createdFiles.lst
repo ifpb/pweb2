@@ -1,0 +1,13 @@
+br/edu/ifpb/lojapweb2/config/SwaggerConfig.class
+br/edu/ifpb/lojapweb2/domain/Produto.class
+br/edu/ifpb/lojapweb2/repository/ProdutoRepository.class
+br/edu/ifpb/lojapweb2/domain/Cliente.class
+br/edu/ifpb/lojapweb2/repository/ClienteRepository.class
+br/edu/ifpb/lojapweb2/repository/CategoriaRepository.class
+br/edu/ifpb/lojapweb2/web/ProdutoResource.class
+br/edu/ifpb/lojapweb2/config/WebConfigurer.class
+br/edu/ifpb/lojapweb2/LojaPweb2Application.class
+br/edu/ifpb/lojapweb2/domain/Categoria.class
+br/edu/ifpb/lojapweb2/service/ClienteService.class
+br/edu/ifpb/lojapweb2/service/ProdutoService.class
+br/edu/ifpb/lojapweb2/web/ClienteResource.class
