@@ -8,6 +8,9 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class ConteudoService {
 
@@ -27,12 +30,20 @@ public class ConteudoService {
         eventPublisher.publishEvent(new ConteudoCriado(conteudo));
     }
 
-    public void criarConteudo(Conteudo conteudo) {
-        conteudoRepository.save(conteudo.conteudoCriado());
+    public Conteudo criarConteudo(Conteudo conteudo) {
+        return conteudoRepository.save(conteudo.conteudoCriado());
     }
 
-    public void removerConteudo(Conteudo conteudo) {
-        conteudoRepository.delete(conteudo.conteudoRemovido());
+    public void removerConteudo(Long conteudoId) {
+        conteudoRepository.deleteById(conteudoId);
+    }
+
+    public List<Conteudo> listarConteudos() {
+        return conteudoRepository.findAll();
+    }
+
+    public Optional<Conteudo> recuperarPorId(Long id) {
+        return conteudoRepository.findById(id);
     }
 
     @EventListener

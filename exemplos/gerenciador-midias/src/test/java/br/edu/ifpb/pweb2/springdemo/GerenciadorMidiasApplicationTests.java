@@ -52,8 +52,7 @@ public class GerenciadorMidiasApplicationTests {
 
 	@Test
 	public void removerConteudo() {
-		Conteudo conteudo = conteudoRepository.findById(2l).get();
-		conteudoService.removerConteudo(conteudo);
+		conteudoService.removerConteudo(2l);
 	}
 
 }
