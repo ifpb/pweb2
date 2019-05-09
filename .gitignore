@@ -1,0 +1,15 @@
+
+.DS_Store
+.DS_Store
+.DS_Store
+exemplos/.DS_Store
+*.jar
+exemplos/api-gateway/.mvn/wrapper/maven-wrapper.jar
+exemplos/api-gateway/.mvn/wrapper/maven-wrapper.properties
+exemplos/api-gateway/mvnw
+exemplos/api-gateway/.mvn/wrapper/maven-wrapper.jar
+exemplos/api-gateway/mvnw.cmd
+exemplos/.DS_Store
+.DS_Store
+exemplos/api-gateway/.mvn/wrapper/maven-wrapper.jar
+exemplos/api-gateway/.mvn/wrapper/MavenWrapperDownloader.java
