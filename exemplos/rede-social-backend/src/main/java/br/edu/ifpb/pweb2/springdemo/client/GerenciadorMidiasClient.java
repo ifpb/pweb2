@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "conteudos", url = "http://localhost:8181")
+@FeignClient(name = "gerenciador-midias")
 @Component
-public interface ConteudoControllerClient {
+public interface GerenciadorMidiasClient {
 
     @GetMapping("/conteudos/{id}")
     ResponseEntity<Conteudo> recuperarConteudo(@PathVariable("id") Long id);
