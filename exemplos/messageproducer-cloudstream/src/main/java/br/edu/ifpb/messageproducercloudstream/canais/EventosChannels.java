@@ -9,12 +9,12 @@ public interface EventosChannels {
 
     String ENTRADA = "eventosEntrada";
 
-    String RETORNO = "eventosRetorno";
+    String SAIDA = "eventosSaida";
 
     @Input(EventosChannels.ENTRADA)
     SubscribableChannel eventosEntrada();
 
-    @Output(EventosChannels.RETORNO)
-    MessageChannel eventosRetorno();
+    @Output(EventosChannels.SAIDA)
+    MessageChannel eventosSaida();
 
 }

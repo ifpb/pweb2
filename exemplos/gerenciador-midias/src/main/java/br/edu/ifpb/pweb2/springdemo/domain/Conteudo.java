@@ -48,9 +48,4 @@ public class Conteudo extends AbstractAggregateRoot<Conteudo> {
         return this;
     }
 
-    public Conteudo conteudoRemovido() {
-        registerEvent(new ConteudoRemovido(this.getId()));
-        return this;
-    }
-
 }

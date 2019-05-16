@@ -35,7 +35,7 @@ public class EventMessages {
 	public void deveEnviarMensagem() {
 		eventosChannels.eventosEntrada().send(MessageBuilder.withPayload(new Evento("ConteudoRemovido", 1L)).build());
 
-		Message<String> received = (Message<String>) this.messageCollector.forChannel(this.eventosChannels.eventosRetorno()).poll();
+		Message<String> received = (Message<String>) this.messageCollector.forChannel(this.eventosChannels.eventosSaida()).poll();
 
 		assertThat(received.getPayload()).isEqualTo("{ 'resultado': 'sucesso' }");
 	}
@@ -45,7 +45,7 @@ public class EventMessages {
 	public static class EventProcessor {
 
 		@StreamListener(EventosChannels.ENTRADA)
-		@SendTo(EventosChannels.RETORNO)
+		@SendTo(EventosChannels.SAIDA)
 		public String tratadorMensagem(Evento evento) {
 			System.out.println("EVENTO CHEGOU = "+evento.getNome());
 			return "{ 'resultado': 'sucesso' }";

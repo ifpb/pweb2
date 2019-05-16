@@ -1,24 +1,32 @@
 package br.edu.ifpb.pweb2.springdemo.services;
 
+import br.edu.ifpb.messageproducercloudstream.canais.EventosChannels;
+import br.edu.ifpb.messageproducercloudstream.evento.Evento;
 import br.edu.ifpb.pweb2.springdemo.domain.Conteudo;
 import br.edu.ifpb.pweb2.springdemo.domain.events.ConteudoCriado;
 import br.edu.ifpb.pweb2.springdemo.domain.events.ConteudoRemovido;
 import br.edu.ifpb.pweb2.springdemo.repositories.ConteudoRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.event.EventListener;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class ConteudoService {
+
+    private final EventosChannels eventosChannels;
 
     private final ConteudoRepository conteudoRepository;
 
     private final ApplicationEventPublisher eventPublisher;
 
-    public ConteudoService(ConteudoRepository conteudoRepository, ApplicationEventPublisher eventPublisher) {
+    public ConteudoService(EventosChannels eventosChannels, ConteudoRepository conteudoRepository, ApplicationEventPublisher eventPublisher) {
+        this.eventosChannels = eventosChannels;
         this.conteudoRepository = conteudoRepository;
         this.eventPublisher = eventPublisher;
     }
@@ -35,6 +43,7 @@ public class ConteudoService {
     }
 
     public void removerConteudo(Long conteudoId) {
+        eventPublisher.publishEvent(new ConteudoRemovido(conteudoId));
         conteudoRepository.deleteById(conteudoId);
     }
 
@@ -53,7 +62,8 @@ public class ConteudoService {
 
     @EventListener
     public void conteudoRemovidoListener(ConteudoRemovido conteudoRemovido) {
-        System.out.println(String.format("Conteúdo do ID %d removido",conteudoRemovido.getIdConteudo()));
+        log.info("Publicando evento de conteúdo removido para id = "+conteudoRemovido.getIdConteudo());
+        eventosChannels.eventosSaida().send(MessageBuilder.withPayload(new Evento("ConteudoRemovido", conteudoRemovido.getIdConteudo())).build());
     }
 
 }

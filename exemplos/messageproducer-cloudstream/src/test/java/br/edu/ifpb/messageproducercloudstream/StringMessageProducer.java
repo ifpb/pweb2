@@ -40,7 +40,7 @@ public class StringMessageProducer {
 		Message<String> received = (Message<String>) this.messageCollector
 				.forChannel(this.processor.output()).poll();
 
-		assertThat(received.getPayload()).isEqualTo("mensagem");
+		assertThat(received.getPayload()).isEqualTo("sucesso");
 	}
 
 	@SpringBootApplication
@@ -51,7 +51,7 @@ public class StringMessageProducer {
 		@SendTo(Processor.OUTPUT)
 		public String tratadorMensagem(String msg) {
 			System.out.println("MENSAGEM CHEGOU = "+msg);
-			return msg;
+			return "sucesso";
 		}
 
 	}

@@ -23,7 +23,7 @@ public class Postagem {
 
     private ZonedDateTime publicacao;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<Long> conteudos;
 
     private String usuario;
