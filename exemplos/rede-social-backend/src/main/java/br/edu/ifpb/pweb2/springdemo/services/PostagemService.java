@@ -1,10 +1,10 @@
 package br.edu.ifpb.pweb2.springdemo.services;
 
+import br.edu.ifpb.commons.domain.Conteudo;
+import br.edu.ifpb.commons.domain.Postagem;
 import br.edu.ifpb.messageproducercloudstream.canais.EventosChannels;
 import br.edu.ifpb.messageproducercloudstream.evento.Evento;
 import br.edu.ifpb.pweb2.springdemo.client.GerenciadorMidiasClient;
-import br.edu.ifpb.pweb2.springdemo.domain.Conteudo;
-import br.edu.ifpb.pweb2.springdemo.domain.Postagem;
 import br.edu.ifpb.pweb2.springdemo.repositories.PostagemRepository;
 import feign.FeignException;
 import lombok.extern.slf4j.Slf4j;

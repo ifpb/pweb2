@@ -68,6 +68,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>br.edu.ifpb</groupId>
+			<artifactId>saga-commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
 
 	</dependencies>
 

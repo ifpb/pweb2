@@ -1,6 +1,6 @@
 package br.edu.ifpb.pweb2.springdemo.client;
 
-import br.edu.ifpb.pweb2.springdemo.domain.Conteudo;
+import br.edu.ifpb.commons.domain.Conteudo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;

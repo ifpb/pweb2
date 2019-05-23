@@ -1,8 +1,8 @@
 package br.edu.ifpb.pweb2.springdemo.services;
 
+import br.edu.ifpb.commons.domain.Conteudo;
 import br.edu.ifpb.messageproducercloudstream.canais.EventosChannels;
 import br.edu.ifpb.messageproducercloudstream.evento.Evento;
-import br.edu.ifpb.pweb2.springdemo.domain.Conteudo;
 import br.edu.ifpb.pweb2.springdemo.domain.events.ConteudoCriado;
 import br.edu.ifpb.pweb2.springdemo.domain.events.ConteudoRemovido;
 import br.edu.ifpb.pweb2.springdemo.repositories.ConteudoRepository;
@@ -39,7 +39,7 @@ public class ConteudoService {
     }
 
     public Conteudo criarConteudo(Conteudo conteudo) {
-        return conteudoRepository.save(conteudo.conteudoCriado());
+        return conteudoRepository.save(conteudo);
     }
 
     public void removerConteudo(Long conteudoId) {
