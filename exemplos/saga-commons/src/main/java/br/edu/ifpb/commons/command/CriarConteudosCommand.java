@@ -12,8 +12,13 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CriarConteudosCommand {
+public class CriarConteudosCommand implements Comando<List<Conteudo>, Long> {
 
     private List<Conteudo> conteudos;
+
+    @Override
+    public List<Conteudo> getAlvo() {
+        return conteudos;
+    }
 
 }

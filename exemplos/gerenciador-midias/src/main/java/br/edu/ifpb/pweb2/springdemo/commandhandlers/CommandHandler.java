@@ -21,13 +21,13 @@ public class CommandHandler {
     @StreamListener(GerenciadorMidiasChannels.CONTEUDO_SERVICE_REQUESTS)
     @SendTo(GerenciadorMidiasChannels.SAGA_REPLY)
     public CommandResponse criarConteudosHandler(CriarConteudosCommand criarConteudosCommand) {
-        CommandResponse resposta = new CommandResponse(CommandResponse.ResponseStatus.SUCESSO);
+        CommandResponse resposta = new CommandResponse(CommandResponse.ResponseStatus.SUCESSO, criarConteudosCommand);
         try {
             for (Conteudo conteudo : criarConteudosCommand.getConteudos()) {
                 conteudoService.criarConteudo(conteudo);
             }
         } catch (Exception e) {
-            resposta = new CommandResponse(CommandResponse.ResponseStatus.ERRO);
+            resposta = new CommandResponse(CommandResponse.ResponseStatus.ERRO, criarConteudosCommand);
         }
 
         return resposta;

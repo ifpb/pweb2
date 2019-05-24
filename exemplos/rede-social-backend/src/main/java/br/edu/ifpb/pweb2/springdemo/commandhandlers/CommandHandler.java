@@ -22,11 +22,11 @@ public class CommandHandler {
     @StreamListener(RedeSocialChannels.REDE_SOCIAL_REQUESTS)
     @SendTo(RedeSocialChannels.SAGA_REPLY)
     public CommandResponse criarPostagemHandler(CriarPostagemCommand criarPostagemCommand) {
-        CommandResponse resposta = new CommandResponse(CommandResponse.ResponseStatus.SUCESSO);
+        CommandResponse resposta = new CommandResponse(CommandResponse.ResponseStatus.SUCESSO, criarPostagemCommand);
         try {
-            postagemService.cadastrarPostagem(criarPostagemCommand.getPostagem());
+            postagemService.cadastrarPostagem(criarPostagemCommand.getPostagemRequest().getPostagem());
         } catch (Exception e) {
-            resposta = new CommandResponse(CommandResponse.ResponseStatus.ERRO);
+            resposta = new CommandResponse(CommandResponse.ResponseStatus.ERRO, criarPostagemCommand);
         }
 
         return resposta;
