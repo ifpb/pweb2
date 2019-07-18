@@ -1,0 +1,7 @@
+<form [formGroup]="form" (submit)="processar()">
+    <label>Nome: </label>
+    <input type="text" formControlName="nome" name="nome" />
+    <label>Idade: </label>
+    <input type="text" formControlName="idade" name="idade" />
+    <input type="submit" value="enviar" />
+</form>
