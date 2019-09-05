@@ -22,14 +22,17 @@ Toda a comunicação será realizada usando o [![Slack Status](https://ifpb.hero
 ## Conteúdo e Cronograma de aulas
 [Acessar planejamento de aulas](https://trello.com/b/GAkkahOf/pweb2-planejamento-de-aulasg)
 
+## Exercícios
+
+* [Exercício de revisão teórica para a prova](exams/EX.md)
+
 ## Avaliações
 
 A nota final será computado através da média das avaliações:
 
 * Avaliação I (Prova Escrita 1)
-* Avaliação II (Prova Escrita 2)
-* Avaliação III (Projeto)
-* Avaliação IV (Homeworks)
+* Avaliação II (Projeto)
+* Avaliação III (Homeworks)
 
 ## Bibliografia
 
