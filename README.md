@@ -33,6 +33,7 @@ A nota final será computado através da média das avaliações:
 * Avaliação I (Prova Escrita 1)
 * Avaliação II (Projeto)
 * Avaliação III (Homeworks)
+* [Avaliação Final](final/final.md)
 
 ## Bibliografia
 
