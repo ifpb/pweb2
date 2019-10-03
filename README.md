@@ -17,23 +17,14 @@
 
 ## Comunicação
 
-Toda a comunicação será realizada usando o [![Slack Status](https://ifpb.herokuapp.com/badge.svg)](https://ifpb.herokuapp.com/) no canal `#ads-pweb2-20191`.
-
-## Conteúdo e Cronograma de aulas
-[Acessar planejamento de aulas](https://trello.com/b/GAkkahOf/pweb2-planejamento-de-aulasg)
-
-## Exercícios
-
-* [Exercício de revisão teórica para a prova](exams/EX.md)
+Toda a comunicação será realizada usando o [![Slack Status](https://ifpb.herokuapp.com/badge.svg)](https://ifpb.herokuapp.com/) no canal `#ads-pweb2-2019-2`.
 
 ## Avaliações
 
 A nota final será computado através da média das avaliações:
-
 * Avaliação I (Prova Escrita 1)
 * Avaliação II (Projeto)
 * Avaliação III (Homeworks)
-* [Avaliação Final](final/final.md)
 
 ## Bibliografia
 
