@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+
+  thymeleaf:
+    enable-spring-el-compiler: true
