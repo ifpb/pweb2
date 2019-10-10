@@ -1,9 +1,6 @@
-package com.example.pweb2.domain;
+package br.edu.ifpb.pweb2.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.Column;
@@ -22,6 +19,7 @@ import java.time.ZonedDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Usuario {
 
     @Id

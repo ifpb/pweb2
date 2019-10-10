@@ -1,4 +1,4 @@
-package com.example.pweb2;
+package br.edu.ifpb.pweb2;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

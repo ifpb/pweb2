@@ -1,8 +1,8 @@
-package com.example.pweb2.controller;
+package br.edu.ifpb.pweb2.controller;
 
-import com.example.pweb2.domain.Usuario;
-import com.example.pweb2.service.UsuarioException;
-import com.example.pweb2.service.UsuarioService;
+import br.edu.ifpb.pweb2.domain.Usuario;
+import br.edu.ifpb.pweb2.service.UsuarioException;
+import br.edu.ifpb.pweb2.service.UsuarioService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +16,12 @@ public class UsuarioController {
 
     public UsuarioController(UsuarioService usuarioService) {
         this.usuarioService = usuarioService;
+    }
+
+
+    @GetMapping("/usuarios/{login}")
+    public Usuario recuperarPorLogin(@PathVariable("login") String login) {
+        return usuarioService.recuperarPorLogin(login).orElseThrow(RuntimeException::new);
     }
 
     @GetMapping("/usuarios")

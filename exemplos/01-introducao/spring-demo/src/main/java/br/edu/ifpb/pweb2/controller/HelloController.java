@@ -1,4 +1,4 @@
-package com.example.pweb2.controller;
+package br.edu.ifpb.pweb2.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

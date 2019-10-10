@@ -1,7 +1,9 @@
-package com.example.pweb2.service;
+package br.edu.ifpb.pweb2.service;
 
-import com.example.pweb2.domain.Usuario;
-import com.example.pweb2.repository.UsuarioRepository;
+import br.edu.ifpb.pweb2.domain.Usuario;
+import br.edu.ifpb.pweb2.repository.UsuarioRepository;
+import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
@@ -25,10 +28,15 @@ public class UsuarioService {
         Usuario usuarioCriado = null;
         try {
             usuarioCriado = this.usuarioRepository.save(usuario);
+            salvarLog();
         } catch (DataIntegrityViolationException e) {
             throw new UsuarioException("Login já cadastrado");
         }
         return usuarioCriado;
+    }
+
+    public void salvarLog() {
+        log.info("Usuário salvo");
     }
 
     public void removerUsuario(Long id) {
