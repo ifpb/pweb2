@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+
+app:
+  autenticacaoPadrao:
+    login: diego
+    senha: 123
+    papel: ADMIN
+    tipoAutenticacao: BANCO

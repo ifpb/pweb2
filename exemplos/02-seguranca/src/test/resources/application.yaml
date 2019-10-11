@@ -1,0 +1,17 @@
+app:
+  autenticacaoPadrao:
+    login: diego
+    senha: 123
+    papel: ADMIN
+    tipoAutenticacao: MEMORIA
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pweb2-teste
+    username: postgres
+    password: secret
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database: postgresql
