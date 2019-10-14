@@ -4,8 +4,6 @@ import br.com.ifpb.pweb2.securitydemo.domain.Usuario;
 import br.com.ifpb.pweb2.securitydemo.repository.UsuarioRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -16,14 +14,11 @@ import java.util.Optional;
 @Slf4j
 public class UsuarioService {
 
-    private final AuthenticationManager authenticationManager;
-
     private final UsuarioRepository usuarioRepository;
 
     private final PasswordEncoder passwordEncoder;
 
-    public UsuarioService(AuthenticationManager authenticationManager, UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder) {
-        this.authenticationManager = authenticationManager;
+    public UsuarioService(UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder) {
         this.usuarioRepository = usuarioRepository;
         this.passwordEncoder = passwordEncoder;
     }
