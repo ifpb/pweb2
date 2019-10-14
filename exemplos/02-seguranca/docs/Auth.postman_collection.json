@@ -66,13 +66,13 @@
 					"type": "basic",
 					"basic": [
 						{
-							"key": "username",
-							"value": "teste",
+							"key": "password",
+							"value": "1234",
 							"type": "string"
 						},
 						{
-							"key": "password",
-							"value": "123",
+							"key": "username",
+							"value": "diego",
 							"type": "string"
 						},
 						{
@@ -111,12 +111,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "$2a$10$bFvv2ZTstgX9g0kNSyLtwe2g8e88gktdxowtzRg3ya3PKWzSq.GvO",
+							"value": "1234",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "teste",
+							"value": "diego",
 							"type": "string"
 						},
 						{
