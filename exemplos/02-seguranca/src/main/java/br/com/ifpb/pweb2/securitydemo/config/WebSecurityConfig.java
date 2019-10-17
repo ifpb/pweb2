@@ -9,9 +9,6 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(jsr250Enabled = true, securedEnabled = true, prePostEnabled = true)
-/***
- * Deve ser carregado por último para garantir que essa configuração será aplicada a todos
- */
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter  {
 
     public WebSecurityConfig() {
