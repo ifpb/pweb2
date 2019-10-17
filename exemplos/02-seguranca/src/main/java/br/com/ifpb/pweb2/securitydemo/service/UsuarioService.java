@@ -43,6 +43,10 @@ public class UsuarioService {
         log.info("Usuário salvo");
     }
 
+    public Optional<Usuario> recuperarPorId(Long id){
+        return this.usuarioRepository.findById(id);
+    }
+
     public void removerUsuario(Long id) {
         this.usuarioRepository.deleteById(id);
     }
