@@ -4,14 +4,13 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-@Configuration
 @ConditionalOnProperty(value = "app.autenticacaoPadrao.tipoAutenticacao", havingValue = "MEMORIA")
-@Order(20)
+@Order(5)
+@Configuration
 public class InMemoryWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
@@ -23,6 +22,7 @@ public class InMemoryWebSecurityConfig extends WebSecurityConfigurerAdapter {
         this.applicationConfig = applicationConfig;
         this.passwordEncoder = passwordEncoder;
     }
+
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
