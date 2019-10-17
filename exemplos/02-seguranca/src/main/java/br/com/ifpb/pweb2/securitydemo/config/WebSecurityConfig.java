@@ -12,21 +12,25 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 /***
  * Deve ser carregado por último para garantir que essa configuração será aplicada a todos
  */
-@Order(10)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter  {
+
+    public WebSecurityConfig() {
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable()
+        http
                 .authorizeRequests()
                 .antMatchers("/api/**").authenticated()
                 .antMatchers("/publico").permitAll()
-                .antMatchers("/usuarios").permitAll()
+                .antMatchers("/usuarios").hasRole("ADMIN")
             .and()
             .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and()
-            .httpBasic();
+                .httpBasic()
+            .and()
+                .csrf().disable();
     }
 
 }
