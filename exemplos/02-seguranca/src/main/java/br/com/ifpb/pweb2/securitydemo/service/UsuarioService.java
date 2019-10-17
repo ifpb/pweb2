@@ -4,6 +4,7 @@ import br.com.ifpb.pweb2.securitydemo.domain.Usuario;
 import br.com.ifpb.pweb2.securitydemo.repository.UsuarioRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,7 @@ public class UsuarioService {
         return this.usuarioRepository.findAll();
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     public Usuario salvarUsuario(Usuario usuario) throws UsuarioException {
         Usuario usuarioCriado = null;
         try {
