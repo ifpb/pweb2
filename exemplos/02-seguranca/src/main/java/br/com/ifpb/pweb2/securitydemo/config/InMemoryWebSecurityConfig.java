@@ -1,5 +1,6 @@
 package br.com.ifpb.pweb2.securitydemo.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -9,9 +10,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @ConditionalOnProperty(value = "app.autenticacaoPadrao.tipoAutenticacao", havingValue = "MEMORIA")
-@Order(5)
 @Configuration
-public class InMemoryWebSecurityConfig extends WebSecurityConfigurerAdapter {
+public class InMemoryWebSecurityConfig {
 
 
     private final ApplicationConfig applicationConfig;
@@ -24,7 +24,7 @@ public class InMemoryWebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
-    @Override
+    @Autowired
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .passwordEncoder(passwordEncoder)

@@ -1,5 +1,6 @@
 package br.com.ifpb.pweb2.securitydemo.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -10,9 +11,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @ConditionalOnProperty(value = "app.autenticacaoPadrao.tipoAutenticacao", havingValue = "BANCO")
-@Order(5)
 @Configuration
-public class DBWebSecurityConfig extends WebSecurityConfigurerAdapter {
+public class DBWebSecurityConfig {
 
     private final UserDetailsService userDetailsService;
 
@@ -23,7 +23,7 @@ public class DBWebSecurityConfig extends WebSecurityConfigurerAdapter {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @Override
+    @Autowired
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
     }
