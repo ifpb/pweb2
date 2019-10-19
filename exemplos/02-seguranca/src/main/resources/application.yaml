@@ -10,4 +10,4 @@ app:
     login: diego
     senha: 123
     papel: ADMIN
-    tipoAutenticacao: BANCO
+    tipoAutenticacao: MEMORIA
