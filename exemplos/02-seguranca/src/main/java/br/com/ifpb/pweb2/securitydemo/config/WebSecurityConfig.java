@@ -37,26 +37,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         this.securityConfig = securityConfig;
     }
 
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http.authorizeRequests()
-//            .antMatchers("/api/**").authenticated()
-//            .antMatchers("/publico").permitAll()
-//            .antMatchers("/usuario").authenticated()
-//                .and()
-//            .sessionManagement()
-//            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//                .and()
-//            .httpBasic()
-//                .and()
-//            .csrf().disable();
-//    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and()
                 .authorizeRequests()
                 .antMatchers("/publico").permitAll()
+                .antMatchers("/login").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(new JwtAuthorizationFilter(authenticationManager(), securityConfig))

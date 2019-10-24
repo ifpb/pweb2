@@ -5,6 +5,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -23,7 +24,9 @@ public class JwtUtil {
         signingKey = securityConfig.getSecret();
     }
 
-    public String generateToken(UserDetails user) {
+    public String generateToken(Authentication authentication) {
+        UserDetails user = ((UserDetails) authentication.getPrincipal());
+
         List<String> roles = user.getAuthorities()
                 .stream()
                 .map(GrantedAuthority::getAuthority)
