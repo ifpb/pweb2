@@ -54,6 +54,11 @@ public class Usuario implements UserDetails {
 
     private LocalDateTime dataCadastro;
 
+    public Usuario(String login, String senha) {
+        this.login=login;
+        this.senha=senha;
+    }
+
     @Override
     @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {

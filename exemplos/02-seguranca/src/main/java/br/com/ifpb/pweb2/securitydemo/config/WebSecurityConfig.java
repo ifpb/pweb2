@@ -23,20 +23,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter  {
 
     private final SecurityConfig securityConfig;
 
-
-    private UsuarioService usuarioService;
-
-    @Autowired
-    private ApplicationConfig applicationConfig;
-
     private final UserDetailsService userDetailsService;
 
     private final PasswordEncoder passwordEncoder;
 
 
-    public WebSecurityConfig(SecurityConfig securityConfig, UsuarioService usuarioService, UserDetailsService userDetailsService, PasswordEncoder passwordEncoder) {
+    public WebSecurityConfig(SecurityConfig securityConfig, UserDetailsService userDetailsService, PasswordEncoder passwordEncoder) {
         this.securityConfig = securityConfig;
-        this.usuarioService = usuarioService;
         this.userDetailsService = userDetailsService;
         this.passwordEncoder = passwordEncoder;
     }
@@ -59,16 +52,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter  {
 
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
-        if(!usuarioService.IsVazio()){
             auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
-        }else{
-            auth.inMemoryAuthentication()
-                    .passwordEncoder(passwordEncoder)
-                    .withUser(applicationConfig.getAutenticacaoPadrao().getLogin())
-                    .password(passwordEncoder.encode(applicationConfig.getAutenticacaoPadrao().getSenha()))
-                    .authorities("ROLE_"+applicationConfig.getAutenticacaoPadrao().getPapel());
-        }
-
     }
 
     @Bean
