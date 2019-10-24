@@ -11,3 +11,10 @@ app:
     senha: 123
     papel: ADMIN
     tipoAutenticacao: MEMORIA
+
+security:
+  tokenType: JWT
+  issuer: ifpb
+  audience: pweb2
+  expiration: 3600000
+  secret: n2r5u8x/A%D*G-KaPdSgVkYp3s6v9y$B&E(H+MbQeThWmZq4t7w!z%C*F-J@NcRf
