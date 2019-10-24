@@ -66,4 +66,8 @@ public class UsuarioService {
         return this.usuarioRepository.save(usuario);
     }
 
+    public boolean IsVazio(){
+        return usuarioRepository.findAll().isEmpty();
+    }
+
 }

@@ -2,9 +2,9 @@ package br.com.ifpb.pweb2.securitydemo.config;
 
 import br.com.ifpb.pweb2.securitydemo.config.jwt.JwtAuthenticationFilter;
 import br.com.ifpb.pweb2.securitydemo.config.jwt.JwtAuthorizationFilter;
+import br.com.ifpb.pweb2.securitydemo.service.UsuarioService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.core.annotation.Order;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -23,13 +23,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter  {
 
     private final SecurityConfig securityConfig;
 
+
+    private UsuarioService usuarioService;
+
+    @Autowired
+    private ApplicationConfig applicationConfig;
+
     private final UserDetailsService userDetailsService;
 
     private final PasswordEncoder passwordEncoder;
 
 
-    public WebSecurityConfig(SecurityConfig securityConfig, UserDetailsService userDetailsService, PasswordEncoder passwordEncoder) {
+    public WebSecurityConfig(SecurityConfig securityConfig, UsuarioService usuarioService, UserDetailsService userDetailsService, PasswordEncoder passwordEncoder) {
         this.securityConfig = securityConfig;
+        this.usuarioService = usuarioService;
         this.userDetailsService = userDetailsService;
         this.passwordEncoder = passwordEncoder;
     }
@@ -52,7 +59,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter  {
 
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
+        if(!usuarioService.IsVazio()){
+            auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
+        }else{
+            auth.inMemoryAuthentication()
+                    .passwordEncoder(passwordEncoder)
+                    .withUser(applicationConfig.getAutenticacaoPadrao().getLogin())
+                    .password(passwordEncoder.encode(applicationConfig.getAutenticacaoPadrao().getSenha()))
+                    .authorities("ROLE_"+applicationConfig.getAutenticacaoPadrao().getPapel());
+        }
+
     }
 
     @Bean
