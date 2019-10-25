@@ -12,7 +12,7 @@ public class ApplicationConfig {
 
     private AutenticacaoPadrao autenticacaoPadrao = new AutenticacaoPadrao();
 
-    private enum TipoAutenticacao { MEMORIA, BANCO };
+    private enum TipoAutenticacao { MEMORIA, BANCO }
 
     @Data
     public class AutenticacaoPadrao {

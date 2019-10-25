@@ -30,8 +30,6 @@ public class UsuarioController {
         return usuarioService.recuperarPorLogin(login).orElseThrow(RuntimeException::new);
     }
 
-
-
     @GetMapping
     public List<Usuario> listarUsuarios() {
 
