@@ -7,7 +7,16 @@ spring:
 
 app:
   autenticacaoPadrao:
-    login: diego
-    senha: 123
+    login: admin
+    senha: 1234
     papel: ADMIN
     tipoAutenticacao: BANCO
+
+security:
+      authLoginUrl: /login
+      tokenType: JWT
+      issuer: ifpb
+      audience: pweb2
+      expiration: 3600000
+      secret: s5v8y/A?D(G+KbPeShVmYq3t6w9z$C&E)H@McQfTjWnZr4u7x!A%D*G-JaNdRgUk
+      ## Use: https://www.allkeysgenerator.com/ para gerar o segredo

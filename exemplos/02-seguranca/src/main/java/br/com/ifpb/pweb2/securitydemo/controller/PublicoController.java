@@ -10,7 +10,7 @@ public class PublicoController {
 
     @GetMapping
     public String exibirMensagem() {
-        return "Olá, meu acesso é público";
+        return "Olá, meu acesso é públicooooo";
     }
 
 }
