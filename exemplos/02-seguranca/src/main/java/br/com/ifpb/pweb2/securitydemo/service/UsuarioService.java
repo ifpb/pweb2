@@ -28,7 +28,6 @@ public class UsuarioService {
         return this.usuarioRepository.findAll();
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
     public Usuario salvarUsuario(Usuario usuario) throws UsuarioException {
         Usuario usuarioCriado = null;
         try {
