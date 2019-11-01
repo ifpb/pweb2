@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "d4be48c3-efd0-48c3-9042-f1b2e062944d",
+		"name": "Eventos de Domínio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registrar Participante",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"nome\" : \"Diego\",\n\t\"email\" : \"diego.pessoa@ifpb.edu.br\",\n\t\"instituicao\": \"IFPB\",\n\t\"cpf\" : \"074.076.204-40\",\n\t\"profissao\": \"Professor\",\n\t\"logradouro\": \"Rua Alves da Silva\",\n\t\"bairro\": \"Jardim Oasis\",\n\t\"cidade\": \"Cajazeiras\",\n\t\"estado\": \"PB\",\n\t\"telefoneCelular\" : \"+55 83 9923903913\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/participante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"participante"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ativar Participante",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/participante/ativar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"participante",
+						"ativar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
