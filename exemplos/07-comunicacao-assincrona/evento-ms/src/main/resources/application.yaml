@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/evento-ms
+    username: postgres
+    password: secret
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+
+  profiles:
+    active: dev
+  cloud:
+    stream:
+      bindings:
+        participanteChannelReply:
+          group: pweb2
+          destination: participanteChannelReply
+        participanteChannel:
+          group: pweb2
+          destination: participanteChannel

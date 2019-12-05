@@ -1,0 +1,15 @@
+server:
+  port: 8089
+
+spring:
+  profiles:
+    active: dev
+  cloud:
+    stream:
+      bindings:
+        participanteChannelReply:
+          group: pweb2
+          destination: participanteChannelReply
+        participanteChannel:
+          group: pweb2
+          destination: participanteChannel
