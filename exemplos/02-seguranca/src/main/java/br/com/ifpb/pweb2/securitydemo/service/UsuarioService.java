@@ -45,6 +45,10 @@ public class UsuarioService {
         log.info("Usuário salvo");
     }
 
+    public Optional<Usuario> recuperarPorId(Long id){
+        return this.usuarioRepository.findById(id);
+    }
+
     public void removerUsuario(Long id) {
         this.usuarioRepository.deleteById(id);
     }
@@ -58,7 +62,12 @@ public class UsuarioService {
     }
 
     public Usuario atualizarUsuario(Usuario usuario) {
+    	usuario.setSenha(passwordEncoder.encode(usuario.getPassword()));
         return this.usuarioRepository.save(usuario);
+    }
+
+    public boolean IsVazio(){
+        return usuarioRepository.findAll().isEmpty();
     }
 
 }

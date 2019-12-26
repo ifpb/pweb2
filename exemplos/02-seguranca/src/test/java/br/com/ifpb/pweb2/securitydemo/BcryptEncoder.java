@@ -18,7 +18,7 @@ public class BcryptEncoder {
 
     @Test
     public void gerarSenha() {
-        String senha = "1234";
+        String senha = "123";
         String hash = this.passwordEncoder.encode(senha);
         log.info("SENHA = ");
         log.info(hash);
