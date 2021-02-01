@@ -1,0 +1,12 @@
+1 -
+
+
+2 - Toda vez que uma requisição é realizada, a aplicação do lado do servidor interceptará o cabeçalho de autorização da requisição
+    e extrairá a informação do token. Uma consulta à base de dados será feita usando este token. Se ele for válido e possuir a
+    permissão necessário para acessar a área requisitada, tudo continuará. Caso contrário, será retornado um código de resposta do
+    tipo 403
+
+
+
+3 - Não, a API não precisa ir até o banco de dados consultar as informações do usuário, pois contido no próprio token
+    já temos suas credenciais de acesso.
