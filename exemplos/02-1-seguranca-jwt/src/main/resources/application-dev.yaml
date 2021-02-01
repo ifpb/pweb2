@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/pweb2
+    url: jdbc:postgresql://localhost:5433/pweb2-jwt
     username: postgres
-    password: secret
+    password: 1327
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
